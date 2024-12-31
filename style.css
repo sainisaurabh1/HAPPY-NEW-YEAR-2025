@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Festive colors */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#countdown, #greeting, #custom-wish {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+#greeting {
+    font-size: 2rem;
+    margin: 20px;
+    color: #fff;
+}
+
+#countdown {
+    font-weight: bold;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #ff7e5f;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #feb47b;
+}
+
+
+/* for add for dynamic background */
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+button:hover {
+    animation: pulse 1s infinite;
+    background-color: #ff5722;
+    color: white;
+}
+
+
+/* button animation pukse */
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+button:hover {
+    animation: pulse 1s infinite;
+    background-color: #ff5722;
+    color: white;
+}
+  
+input:hover{
+    animation: pulse 1s infinite;
+    background-color:orangered;
+    color:black;
+    font-family: bold;
+    /* text-emphasis-color: red; */
+
+}
+input::placeholder{
+    color:black;
+    font-size: bold;
+}
+
+
+
+
+
+/* for texping effect ( wish reveal) */
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typing-effect {
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    width: 100%;
+    display: inline-block;
+    animation: typing 2s steps(30, end), blink 0.5s step-end infinite;
+}
